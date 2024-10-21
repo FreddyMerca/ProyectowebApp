@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Artículos para el Hogar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .hero {
+            background-image: url('https://example.com/home-items-banner.jpg'); /* Puedes cambiar esta URL */
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .product {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 250px;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .product p {
+            color: #888;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tienda Hogar</h1>
+        <p>Encuentra los mejores artículos para tu hogar</p>
+    </header>
+
+    <nav>
+        <a href="servicios">Servicios</a>
+        <a href="tienda">Tienda</a>
+        <a href="blog">Blog</a>
+        <a href="contacto">Contáctanos</a>
+    </nav>
+
+    <section class="hero">
+        <h1>¡Bienvenido a nuestra tienda!</h1>
+    </section>
+
+    <section class="content">
+        <div class="product">
+            <img src="https://example.com/couch.jpg" alt="Sofá moderno">
+            <h3>Sofá Moderno</h3>
+            <p>$399999</p>
+        </div>
+        <div class="product">
+            <img src="https://example.com/dining-set.jpg" alt="Juego de comedor">
+            <h3>Juego de Comedor</h3>
+            <p>$499999</p>
+        </div>
+        <div class="product">
+            <img src="https://example.com/lamp.jpg" alt="Lámpara de mesa">
+            <h3>Lámpara de Mesa</h3>
+            <p>$59999</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Tienda Hogar - Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
