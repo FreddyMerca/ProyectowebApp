@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Artículos para el Hogar</title>
+{% extends "ProyectowebApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -77,19 +78,8 @@
 </head>
 <body>
 
-    <header>
-        <h1>Blog de Artículos para el Hogar</h1>
-        <p>Consejos, tendencias y novedades sobre decoración y mejoras del hogar.</p>
-    </header>
-
-    <nav>
-        <a href="inicio">Inicio</a>
-        <a href="tienda">Tienda</a>
-        <a href="servicios">Servicios</a>
-        <a href="contacto">Blog</a>
-        <a href="#">Contáctanos</a>
-    </nav>
-
+  
+    
     <section class="blog-section">
         <article class="blog-post">
             <h2>Cómo Elegir el Sofá Perfecto para tu Sala</h2>
@@ -110,9 +100,4 @@
         </article>
     </section>
 
-    <footer class="footer">
-        <p>&copy; 2024 Blog Hogar - Todos los derechos reservados.</p>
-    </footer>
-
-</body>
-</html>
+    {% endblock %}
