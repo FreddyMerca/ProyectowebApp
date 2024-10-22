@@ -6,7 +6,7 @@ class Servicio(models.Model):
 
     titulo=models.CharField(max_length=60)
     contenido=models.CharField(max_length=60)
-    imagen=models.ImageField()
+    imagen=models.ImageField(upload_to='servicios')
     created=models.DateTimeField(auto_now=True)
     updated=models.DateTimeField(auto_now=True)
 
