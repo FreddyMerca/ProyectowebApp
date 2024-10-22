@@ -5,81 +5,29 @@
 {% block content %}
 
     <style>
-        .contact-section {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #333;
-            padding: 20px;
+        .contenedorFormulario{
+
+            background-color: rgba(24, 64, 8, 0.8);
+            width: 50%;
+            margin: 10px auto;
             border-radius: 10px;
+            padding: 1px 0px;
+
         }
 
-        .contact-section h2 {
-            color: #fff;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .contact-section form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .contact-section label {
-            color: #fff;
-            margin-bottom: 5px;
-            font-size: 14px;
-        }
-
-        .contact-section input[type="text"],
-        .contact-section input[type="email"],
-        .contact-section textarea {
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 14px;
-            color: #333;
-        }
-
-        .contact-section input[type="text"]:focus,
-        .contact-section input[type="email"]:focus,
-        .contact-section textarea:focus {
-            border-color: #007bff;
-        }
-
-        .contact-section button {
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .contact-section button:hover {
-            background-color: #0056b3;
-        }
+       
     </style>
 
-    <section class="contact-section">
-        <h2>Formulario de Contacto</h2>
-        <form action="/enviar-mensaje" method="POST">
-            {% csrf_token %}
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
 
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+<div class="contenedorFormulario">
 
-            <label for="asunto">Asunto:</label>
-            <input type="text" id="asunto" name="asunto" placeholder="Asunto del mensaje" required>
+    <form action="" method="POST" style="text-align: center;"> 
+        {% csrf_token %}   
+        <table style="color: white; margin: 20px auto;">{{miFormulario.as_table}}</table>
+        <input type="submit" value="Enviar" style="width: 250px;">
+    </form>
 
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+</div>
 
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
+    
 {% endblock %}
