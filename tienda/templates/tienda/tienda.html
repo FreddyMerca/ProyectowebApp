@@ -1,0 +1,30 @@
+{% extends "ProyectowebApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+
+    {% for producto in productos %}
+
+    <div class="col-md-3"> <!-- Esto ajusta el ancho de cada columna -->
+      <div class="card" style="width: 100%; margin: 5px 5px"> <!-- La tarjeta ocupa todo el ancho de la columna -->
+        
+        <img src="{{producto.imagen.url}}" class="card-img-top" style="width: 100%; height: 200px; object-fit: cover;"> <!-- Todas las imágenes tendrán el mismo tamaño -->
+        
+        <div class="card-body" style="text-align: center;">
+          <h5 class="card-title">{{producto.nombre}}</h5> 
+          <p class="card-text">$&nbsp;{{producto.precio}}</p>
+        </div><!-- Div card-body cierra -->
+    
+      </div><!-- Div card cierra -->
+    </div><!-- Div col-md-3 cierra -->
+
+    {% endfor %}
+
+  </div><!-- Div row cierra -->
+</div><!-- Div container cierra -->
+
+{% endblock %}

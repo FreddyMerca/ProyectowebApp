@@ -6,9 +6,7 @@ def inicio(request):
 
     return render(request,"ProyectowebApp/inicio.html")
 
-def tienda(request):
 
-    return render(request,"ProyectowebApp/tienda.html")
 
 
 
