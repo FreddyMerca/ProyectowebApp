@@ -5,8 +5,8 @@ class carrito:
         carrito=self.session.get("carrito") #Se iguala la sesion del usuario a esa variable carrito 
         if not carrito:
             carrito=self.session["carrito"]={}
-        else:
-            self.carrito=carrito
+        #else:
+        self.carrito=carrito
 
     def agregar(self, producto):
         if(str(producto.id) not in self.carrito.keys()):
@@ -36,15 +36,17 @@ class carrito:
             del self.carrito[producto.id]
             self.guardar_carrito()
 
-    def restar_producto(self, producto):
+    def restar(self, producto):
         for key, value in self.carrito.items():
                 if key==str(producto.id):
                     value["cantidad"]=value["cantidad"]-1
+                    value["precio"]=float(value["precio"])-producto.precio
                     if value["cantidad"]<1:
                         self.eliminar(producto)
                     break
-        self.guardar_carrito  
+        self.guardar_carrito 
 
+    
     def limpiar_carro(self):
         self.session["carrito"]={}
         self.session.modified=True

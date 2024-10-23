@@ -8,7 +8,8 @@
 
   <div style="float: right;">
 
-    <p style="color: white;">Total = {{importe_total_carro}}</p>
+    
+    {% include "carro/widget.html" %}
 
   </div>
 
@@ -30,7 +31,7 @@
 
         <div class="card-footer text-center">
 
-          <a href="#" class="btn btn-sucess">Agregar al Carrito</a>
+          <a href="{% url 'carrito:agregar' producto.id %}" class="btn btn-sucess">Agregar al Carrito</a>
 
         </div> 
     
