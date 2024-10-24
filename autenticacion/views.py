@@ -48,7 +48,7 @@ def loguear(request):
             else:
                 messages.error(request, "Usuario no Existe")
         else:
-           messages.error(request, "Informacio Incorrecta")
+           messages.error(request, "Usuario o Contraseña Errada")
     
 
     form=AuthenticationForm()

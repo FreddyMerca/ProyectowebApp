@@ -1,8 +1,8 @@
-<table class="table table-bordered" style="color: white;">
+<table class="table table-bordered table dark" style="color: white;">
     <thead>
         <tr>
 
-            <th colspan="3" class="text-center">
+            <th colspan="3" class="text-center" style="font-size: smaller;">
 
                 Carro Compras
 
@@ -14,9 +14,9 @@
 
         <tr>
 
-            <th>Producto</th>
-            <th>Cantidad</th>
-            <th>Total Parcial</th>
+            <th style="font-size: smaller;">Producto</th>
+            <th style="font-size: smaller;">Cantidad</th>
+            <th style="font-size: smaller;">Total Parcial</th>
 
         </tr>
 
@@ -29,12 +29,12 @@
 
                 <tr class="text-center">
 
-                    <td>{{value.nombre}}</td>
-                    <td>{{value.cantidad}}</td>
-                    <td>
+                    <td style="font-size: smaller;">{{value.nombre}}</td>
+                    <td style="font-size: smaller;">{{value.cantidad}}</td>
+                    <td style="font-size: smaller;">
 
-                        <a href="{% url 'carrito:agregar' value.producto_id %}" class="btn btn-sm btn-sucess">+</a>
-                        <a href="{% url 'carrito:restar'  value.producto_id %}" class="btn btn-sm btn-sucess">-</a><br/>
+                        <a href="{% url 'carrito:agregar' value.producto_id %}" class="btn btn-sm btn-success">+</a>
+                        <a href="{% url 'carrito:restar'  value.producto_id %}" class="btn btn-sm btn-success">-</a><br/>
 
                         {{value.precio}}
 
@@ -60,7 +60,7 @@
             </tr>
         {% endif %}
 
-
+      
 
 
 
@@ -72,5 +72,23 @@
                 Total : {{importe_total_carro}}
             </td>
         </tr>
+
+        {% if request.session.carrito.items %}
+
+        <tr>
+            
+
+            <td colspan="3" style="text-align: center;">
+
+                <a href="#" class="btn btn-success">Hacer Compra</a>
+
+            </td>
+
+
+
+        </tr>
+
+        {% endif %}
+
     </tfoot>
 </table>

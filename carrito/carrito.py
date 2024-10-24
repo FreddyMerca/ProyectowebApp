@@ -5,7 +5,7 @@ class carrito:
         carrito=self.session.get("carrito") #Se iguala la sesion del usuario a esa variable carrito 
         if not carrito:
             carrito=self.session["carrito"]={}
-        #else:
+        
         self.carrito=carrito
 
     def agregar(self, producto):
