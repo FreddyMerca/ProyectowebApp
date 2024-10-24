@@ -16,12 +16,12 @@ class carrito:
                 "precio":str(producto.precio),
                 "cantidad":1,
                 "imagen":producto.imagen.url,
-
             }
         else:
             for key, value in self.carrito.items():
                 if key==str(producto.id):
                     value["cantidad"]=value["cantidad"]+1
+                    value["precio"]=float(value["precio"])+producto.precio
                     break
 
         self.guardar_carrito()
@@ -39,15 +39,17 @@ class carrito:
     def restar(self, producto):
         for key, value in self.carrito.items():
                 if key==str(producto.id):
-                    value["cantidad"]=value["cantidad"]-1
+                    varResta=1
+                    value["cantidad"]=value["cantidad"]-varResta
                     value["precio"]=float(value["precio"])-producto.precio
                     if value["cantidad"]<1:
                         self.eliminar(producto)
                     break
-        self.guardar_carrito 
+               
+        self.guardar_carrito() 
 
     
-    def limpiar_carro(self):
+    def limpiar(self):
         self.session["carrito"]={}
         self.session.modified=True
 

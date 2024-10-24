@@ -31,5 +31,5 @@ def restar_producto(request, producto_id):
 def limpiar_carro(request, producto_id):
     
     carrito_instancia=carrito(request)
-    carrito_instancia.limpiar_carro
+    carrito_instancia.limpiar
     return redirect("Tienda")

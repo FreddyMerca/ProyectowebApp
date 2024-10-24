@@ -43,6 +43,10 @@ INSTALLED_APPS = [
     'contacto',
     'tienda',
     'carrito',
+    'autenticacion',
+    'crispy_forms',
+    'crispy_bootstrap4',
+   
 ]
 
 MIDDLEWARE = [
@@ -84,6 +88,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        
     }
 }
 
@@ -141,3 +146,7 @@ EMAIL_HOST_PASSWORD="hinoxauvczswatu"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_ALLOWED_TEMPLATE_PACK='bootstrap4'
+

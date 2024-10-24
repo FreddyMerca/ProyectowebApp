@@ -6,7 +6,7 @@
     {% load static %}
 
     <!-- Bootstrap -->
-    <link href="{% static 'ProyectowebApp/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'ProyectowebApp/vendor/bootstrap/css/bootstrapp.min.css' %}" rel="stylesheet">
 
      <!-- Fonts -->
     
@@ -22,8 +22,25 @@
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
       
-        <span class="site-heading-lower">Gestión de Pedidos</span>
+        <span class="site-heading-lower">Nuevo Proyecto</span>
       </h1>
+
+      <div style="text-align: right; margin-right: 100px; color: white;">
+
+        {% if user.is_authenticated %}
+
+          Hola : {{user.username}} &nbsp;&nbsp;<a href="{% url 'cerrar_sesion' %}" style="color: white;">Cerrar Sesion</a>
+
+
+        {% else %}
+
+          <a href="{% url 'loguear' %}" style="color: white;">Login</a>&nbsp;&nbsp;&nbsp;<a href="{% url 'autenticacion' %}" style="color: white;">Registrate</a>
+
+        {% endif %}
+
+
+
+      </div>
 
 
  <!-- Navbar -->
